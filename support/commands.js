@@ -103,6 +103,10 @@ Cypress.Commands.add('rejectMetamaskSignatureRequest', () => {
   return cy.task('rejectMetamaskSignatureRequest');
 });
 
+Cypress.Commands.add('rejectMetamaskDataSignatureRequest', () => {
+  return cy.task('rejectMetamaskDataSignatureRequest');
+});
+
 Cypress.Commands.add('confirmMetamaskPermissionToSpend', () => {
   return cy.task('confirmMetamaskPermissionToSpend');
 });
