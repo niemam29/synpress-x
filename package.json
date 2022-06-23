@@ -1,6 +1,6 @@
 {
-  "name": "@niemam29/synpress-x",
-  "version": "1.2.1-beta.1",
+  "name": "@synthetixio/synpress",
+  "version": "1.2.1-beta.3",
   "description": "Synpress in an wrapper around Cypress test runner which extends its capabilities with conjunction of Puppeteer. It's used used across Synthetix projects.",
   "keywords": [
     "Synpress",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/niemam29/synpress-x.git"
+    "url": "git+https://github.com/synthetixio/synpress.git"
   },
   "license": "MIT",
   "author": {
