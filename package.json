@@ -41,6 +41,7 @@
     "update:deps": "ncu -u -x 'node-fetch eslint' && yarn",
     "start:server": "serve tests/test-dapp -p 3000",
     "test:e2e": "start-server-and-test 'yarn start:server' http-get://localhost:3000 'SKIP_METAMASK_SETUP=true SYNPRESS_LOCAL_TEST=true node synpress.js run --configFile=synpress.config.js'",
+    "test:open": "start-server-and-test 'yarn start:server' http-get://localhost:3000 'SKIP_METAMASK_SETUP=true SYNPRESS_LOCAL_TEST=true node synpress.js open --configFile=synpress.config.js'",
     "test:e2e:ci": "start-server-and-test 'yarn start:server' http-get://localhost:3000 'SKIP_METAMASK_SETUP=true SYNPRESS_LOCAL_TEST=true node synpress.js run --group smoke-tests --record'"
   },
   "dependencies": {
@@ -81,6 +82,7 @@
     "eslint-plugin-unicorn": "^43.0.2",
     "etherscan-api": "^10.2.0",
     "find-config": "^1.0.0",
+    "fs-jetpack": "^5.0.0",
     "node-fetch": "^2.6.1",
     "prettier": "^2.7.1",
     "serve": "^14.0.1",

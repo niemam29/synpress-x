@@ -14,6 +14,7 @@ const defaultArguments = [
 
 const launcher = {
   async open(arguments_) {
+    await helpers.resetMetamaskExtension();
     await (arguments_.configFile
       ? cypress.open({ configFile: arguments_.configFile })
       : cypress.open({

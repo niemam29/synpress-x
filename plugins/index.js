@@ -27,6 +27,7 @@ module.exports = (on, config) => {
 
     // metamask welcome screen blocks cypress from loading
     if (browser.name === 'chrome') {
+      await helpers.resetMetamaskExtension();
       arguments_.args.push(
         '--disable-background-timer-throttling',
         '--disable-backgrounding-occluded-windows',

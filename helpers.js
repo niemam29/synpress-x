@@ -3,6 +3,12 @@ const fs = require('fs');
 const zip = require('cross-zip');
 const path = require('path');
 const packageJson = require('./package.json');
+const jetpack = require('fs-jetpack');
+const os = require('os');
+const src = jetpack.cwd(
+  os.homedir(),
+  '.config/Cypress/cy/production/browsers/chrome-stable/interactive/Default',
+);
 
 let networkName = 'mainnet';
 let networkId = 1;
@@ -93,5 +99,8 @@ module.exports = {
     const metamaskDirectory = path.join(downloadsDirectory, 'metamask');
     await module.exports.extract(downloadDestination, metamaskDirectory);
     return metamaskDirectory;
+  },
+  resetMetamaskExtension: async () => {
+    await src.remove('Local Extension Settings');
   },
 };

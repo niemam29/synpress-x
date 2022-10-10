@@ -1,5 +1,5 @@
 const playwright = require('./playwright');
-
+const helpers = require('helpers');
 const {
   welcomePageElements,
   firstTimeFlowPageElements,
@@ -818,7 +818,7 @@ module.exports = {
         await playwright.switchToCypressWindow();
         return true;
       } else {
-        // todo: reset metamask state
+        await helpers.resetMetamaskExtension();
       }
     }
   },
