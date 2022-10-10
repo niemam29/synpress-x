@@ -1,5 +1,5 @@
 const playwright = require('./playwright');
-const helpers = require('helpers');
+const helpers = require('../helpers');
 const {
   welcomePageElements,
   firstTimeFlowPageElements,
